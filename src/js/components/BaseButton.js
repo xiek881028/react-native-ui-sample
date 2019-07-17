@@ -2,7 +2,6 @@ import React, { Component, Children } from 'react';
 import {
   View,
   Text,
-  TouchableWithoutFeedback,
   StyleSheet,
   Animated,
 } from 'react-native';

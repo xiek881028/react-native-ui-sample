@@ -62,10 +62,6 @@
 		EB2E3566EEAA4007BC12BBF6 /* libRNCViewpager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 895D3577E2744079A7373163 /* libRNCViewpager.a */; };
 		AE230ED55BF64CC789218A52 /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3C091C83DE4C588E57F0BA /* libRNDeviceInfo.a */; };
 		E7B3AD8D4A554CE6B6CB7803 /* libRNDeviceInfo-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CAACD85EFE14C5CBD395E59 /* libRNDeviceInfo-tvOS.a */; };
-		C421667C5E1F471385696534 /* iconfont.svg in Resources */ = {isa = PBXBuildFile; fileRef = 67450B1CD4694C0DA3E4F3B9 /* iconfont.svg */; };
-		48B00BE93E5F465CA2B47B41 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CB6C91BEC164F61BFA40481 /* iconfont.ttf */; };
-		EF017E689E5B4CB78D23D78E /* iconfont.woff in Resources */ = {isa = PBXBuildFile; fileRef = 10C27F7A8BE64679AD2C54AF /* iconfont.woff */; };
-		7EA605506C504009A5C9BC19 /* iconfont.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 45EDE14821F948AF8BFFC149 /* iconfont.woff2 */; };
 		F16FFEA96C9F4DB68D7BCB89 /* libRNSVG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0C5C800A7B451F9083BE21 /* libRNSVG.a */; };
 		5B3E5B75EC70470C9B8A484E /* libRNSVG-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2B97802E3DA4CAA9C80D501 /* libRNSVG-tvOS.a */; };
 /* End PBXBuildFile section */
@@ -403,10 +399,6 @@
 		9C361AA5A1534874ABF7EA00 /* RNDeviceInfo.xcodeproj */ = {isa = PBXFileReference; name = "RNDeviceInfo.xcodeproj"; path = "../node_modules/react-native-device-info/ios/RNDeviceInfo.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		EF3C091C83DE4C588E57F0BA /* libRNDeviceInfo.a */ = {isa = PBXFileReference; name = "libRNDeviceInfo.a"; path = "libRNDeviceInfo.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		7CAACD85EFE14C5CBD395E59 /* libRNDeviceInfo-tvOS.a */ = {isa = PBXFileReference; name = "libRNDeviceInfo-tvOS.a"; path = "libRNDeviceInfo-tvOS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		67450B1CD4694C0DA3E4F3B9 /* iconfont.svg */ = {isa = PBXFileReference; name = "iconfont.svg"; path = "../src/icons/iconfont/iconfont.svg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		4CB6C91BEC164F61BFA40481 /* iconfont.ttf */ = {isa = PBXFileReference; name = "iconfont.ttf"; path = "../src/icons/iconfont/iconfont.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		10C27F7A8BE64679AD2C54AF /* iconfont.woff */ = {isa = PBXFileReference; name = "iconfont.woff"; path = "../src/icons/iconfont/iconfont.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		45EDE14821F948AF8BFFC149 /* iconfont.woff2 */ = {isa = PBXFileReference; name = "iconfont.woff2"; path = "../src/icons/iconfont/iconfont.woff2"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		D602554C5296424EBF7F9355 /* RNSVG.xcodeproj */ = {isa = PBXFileReference; name = "RNSVG.xcodeproj"; path = "../node_modules/react-native-svg/ios/RNSVG.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		7A0C5C800A7B451F9083BE21 /* libRNSVG.a */ = {isa = PBXFileReference; name = "libRNSVG.a"; path = "libRNSVG.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		A2B97802E3DA4CAA9C80D501 /* libRNSVG-tvOS.a */ = {isa = PBXFileReference; name = "libRNSVG-tvOS.a"; path = "libRNSVG-tvOS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
@@ -709,10 +701,6 @@
 				BCBA74FFF6F04CFD8B43D7CB /* Octicons.ttf */,
 				8720B3FBAD374BA6A2676562 /* SimpleLineIcons.ttf */,
 				397D3A1219264ADBA8B160FB /* Zocial.ttf */,
-				67450B1CD4694C0DA3E4F3B9 /* iconfont.svg */,
-				4CB6C91BEC164F61BFA40481 /* iconfont.ttf */,
-				10C27F7A8BE64679AD2C54AF /* iconfont.woff */,
-				45EDE14821F948AF8BFFC149 /* iconfont.woff2 */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1179,10 +1167,6 @@
 				EC52259824CF4CD4B5997FC1 /* Octicons.ttf in Resources */,
 				E8EB441911EA43918659BB03 /* SimpleLineIcons.ttf in Resources */,
 				2C4431DE09FB484DB7D88501 /* Zocial.ttf in Resources */,
-				C421667C5E1F471385696534 /* iconfont.svg in Resources */,
-				48B00BE93E5F465CA2B47B41 /* iconfont.ttf in Resources */,
-				EF017E689E5B4CB78D23D78E /* iconfont.woff in Resources */,
-				7EA605506C504009A5C9BC19 /* iconfont.woff2 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
