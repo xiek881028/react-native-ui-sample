@@ -48,3 +48,6 @@ npm run iconfont
 1. Attempted to transition from state \`RESPONDER_INACTIVE_PRESS_IN\` to \`RESPONDER_ACTIVE_LONG_PRESS_IN\`, which is not supported. This is most likely due to \`Touchable.longPressDelayTimeout\` not being cancelled.
 > 原因是chrome调试时间与手机时间不一致导致，解决方案是同步PC与手机时间，误差越小报错频率越低。一般误差低于1s即不影响开发。具体详见[github](https://github.com/facebook/react-native/issues/11989#issuecomment-314111441)
 2. redux会在每次dispatch时重渲染，需要手动做优化处理
+3. 安装时不要使用`npm`或`cnpm`，使用`yarn`，否则项目运行时会有诸多问题
+4. android编译失败有时是缓存引起的。可以删除`android/app/build`文件夹下所有内容重新运行
+5. css编写不支持多选择器、父子选择器等，注意组件内css命名唯一。css属性采用小驼峰的命名方式，请注意

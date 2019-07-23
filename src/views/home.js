@@ -18,6 +18,7 @@ import BasePage from '../js/components/BasePage.js';
 import BaseButton from '../js/components/BaseButton.js';
 import BaseIcon from '../js/components/BaseIcon.js';
 import BaseOverlay from '../js/components/BaseOverlay.js';
+import BaseLayout from '../js/components/BaseLayout.js';
 
 class Home extends Component {
   constructor(props) {
@@ -63,86 +64,96 @@ class Home extends Component {
         loginPermission={true}
         style={style.box}
       >
-        <Avatar.Image
-          size={120}
-          source={{ uri: 'http://static.bagazhu.com/images/logo/avatar_admin.png' }}
-        />
-        <Text style={style.text}>MADAO</Text>
-        <BaseOverlay
-          // ref="test"
-          // _onPanResponderGrant={(evt, gestureState) => {
-          //   console.log(`~~~evt~~~~`, evt);
-          //   console.log(`~~~gestureState~~~~`, gestureState);
-          // }}
-          // fixedPoint={{x: 20, y: 20}}
+        <BaseLayout
+          style={style.box}
         >
-          <View
-            style={style.overlay}
-            slot="view"
+          <Avatar.Image
+            size={120}
+            source={{ uri: 'http://static.bagazhu.com/images/logo/avatar_admin.png' }}
+            slot={3}
+          />
+          <BaseLayout slot={1}>
+            <Text slot={2}>test1</Text>
+            <Text slot={1}>test2</Text>
+          </BaseLayout>
+          <Text style={style.text} slot={2}>MADAO</Text>
+          <BaseOverlay
+            slot={1}
+            // ref="test"
+            // _onPanResponderGrant={(evt, gestureState) => {
+            //   console.log(`~~~evt~~~~`, evt);
+            //   console.log(`~~~gestureState~~~~`, gestureState);
+            // }}
+            // fixedPoint={{x: 20, y: 20}}
           >
-            <Text>居然没有事件顺序触发！！！</Text>
+            <View
+              style={style.overlay}
+              slot="view"
+            >
+              <Text>居然没有事件顺序触发！！！</Text>
+            </View>
+            <View
+              slot="modal"
+              style={style.modalView}
+            >
+              <FlatList
+                data={[
+                  {key: 'a'},
+                  {key: 'b'},
+                  {key: 'c'},
+                  {key: 'd'},
+                  {key: 'b1'},
+                ]}
+                renderItem={({item}) => <Text>{item.key}</Text>}
+              />
+            </View>
+          </BaseOverlay>
+          <View style={styleC.btnBox}>
+            <Button
+              mode="contained"
+              onPress={() => this.props.navigation.push('test2')}
+              style={style.btn}
+            >
+              <Image
+                style={style.image}
+                source={{ uri: 'http://static.bagazhu.com/images/logo/avatar_admin.png' }}/>
+              <Text>去底部导航页</Text>
+              {/* <BaseIcon name="icon-jinggaoicon" type="symbol" size={28}/> */}
+              <Text>2</Text>
+            </Button>
+            <Button
+              mode="outlined"
+              onPress={() => this.props.navigation.push('test3')}
+              style={style.btn}
+              onPressIn={() => console.log(`~~~onPressIn~~~`)}
+            >
+              去抽屉导航页
+            </Button>
+            <BaseButton
+              style={style.btnBox}
+              onPressIn={(a, b, c, d) => {
+                console.log(`a: ${a},  b: ${b},  c: ${c},  d: ${d}`);
+                console.log(`~~~onPressIn~~~`);
+              }}
+              // groupStyle={style.groupBox}
+              // textStyle={style.btnFont}
+              // disabledStyle={style.disabledStyle}
+              // disabledGroupStyle={style.disabledStyle}
+              // disabledTextStyle={style.disabledTextStyle}
+              // rippleColor='dark'
+              // shadow={true}
+              // disabled={true}
+            >
+              <Feather name="folder"/>
+              <BaseIcon name="icon-jinggaoicon" type="symbol" size={28}/>
+              去底部导航页
+              <Image
+                style={style.image}
+                source={{ uri: 'http://static.bagazhu.com/images/logo/avatar_admin.png' }}/>
+              <Text>2</Text>
+            </BaseButton>
           </View>
-          <View
-            slot="modal"
-            style={style.modalView}
-          >
-            <FlatList
-              data={[
-                {key: 'a'},
-                {key: 'b'},
-                {key: 'c'},
-                {key: 'd'},
-                {key: 'b1'},
-              ]}
-              renderItem={({item}) => <Text>{item.key}</Text>}
-            />
-          </View>
-        </BaseOverlay>
-        <View style={styleC.btnBox}>
-          <Button
-            mode="contained"
-            onPress={() => this.props.navigation.push('test2')}
-            style={style.btn}
-          >
-            <Image
-              style={style.image}
-              source={{ uri: 'http://static.bagazhu.com/images/logo/avatar_admin.png' }}/>
-            <Text>去底部导航页</Text>
-            {/* <BaseIcon name="icon-jinggaoicon" type="symbol" size={28}/> */}
-            <Text>2</Text>
-          </Button>
-          <Button
-            mode="outlined"
-            onPress={() => this.props.navigation.push('test3')}
-            style={style.btn}
-            onPressIn={() => console.log(`~~~onPressIn~~~`)}
-          >
-            去抽屉导航页
-          </Button>
-          <BaseButton
-            style={style.btnBox}
-            onPressIn={(a, b, c, d) => {
-              console.log(`a: ${a},  b: ${b},  c: ${c},  d: ${d}`);
-              console.log(`~~~onPressIn~~~`);
-            }}
-            // groupStyle={style.groupBox}
-            // textStyle={style.btnFont}
-            // disabledStyle={style.disabledStyle}
-            // disabledGroupStyle={style.disabledStyle}
-            // disabledTextStyle={style.disabledTextStyle}
-            // rippleColor='dark'
-            // shadow={true}
-            // disabled={true}
-          >
-            <Feather name="folder"/>
-            <BaseIcon name="icon-jinggaoicon" type="symbol" size={28}/>
-            去底部导航页
-            <Image
-              style={style.image}
-              source={{ uri: 'http://static.bagazhu.com/images/logo/avatar_admin.png' }}/>
-            <Text>2</Text>
-          </BaseButton>
-        </View>
+        </BaseLayout>
       </BasePage>
     );
   }
